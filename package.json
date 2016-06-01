@@ -1,0 +1,39 @@
+{
+  "name": "cordova-clickyab-miladesign",
+  "version": "1.0.0",
+  "description": "Show Clickyab Ads",
+  "cordova": {
+    "id": "cordova-clickyab-miladesign",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miladesign/cordova-clickyab-miladesign.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "ad",
+    "clickyab",
+    "monetisation",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+"devDependencies": {
+    "cordova": ">=3.0.0"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Milad Mohammadi",
+  "license": "Clickyab",
+  "bugs": {
+    "url": "https://github.com/miladesign/cordova-clickyab-miladesign/issues"
+  },
+  "homepage": "https://github.com/miladesign/cordova-clickyab-miladesign#readme"
+}

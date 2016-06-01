@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-clickyab-miladesign"
+    version="1.0.0">
+	
+    <name>Cordova Clickyab Plugin</name>
+    <description>Show Clickyab Ads</description>
+    <author>Milad Mohammadi</author>	
+    <license>miladesign.ir</license>
+    <keywords>cordova,plugin,ad,clickyab,monetisation</keywords>
+    <repo>https://github.com/miladesign/cordova-clickyab-miladesign</repo>
+    <issue>https://github.com/miladesign/cordova-clickyab-miladesign/issues</issue>	
+	<engines>
+	    <engine name="cordova" version=">=3.0.0" />
+	</engines>
+ 	
+    <js-module src="www/clickyab.js">
+        <clobbers target="window.clickyab" />
+    </js-module>    
+    
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="MdClickyab">
+				<param name="android-package" value="ir.clickyab.cordova.MdClickyab"/>
+			</feature>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+		</config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity
+				android:name="com.clickyab.CYActivity"  android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+				android:theme="@android:style/Theme.Translucent"/>
+		</config-file>
+
+				
+		<source-file src="src/android/MdClickyab.java" target-dir="ir.clickyab.cordova" />
+		<source-file src="src/android/clickyab.1.1.4.beta.jar" target-dir="libs" />
+	</platform>
+	
+</plugin>
