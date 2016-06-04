@@ -15,15 +15,15 @@
 	    <engine name="cordova" version=">=3.0.0" />
 	</engines>
  	
-    <js-module src="www/clickyab.js">
-        <clobbers target="window.clickyab" />
+    <js-module src="www/Clickyab.js">
+        <clobbers target="window.Clickyab" />
     </js-module>    
     
 	<!-- android -->
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
-			<feature name="MdClickyab">
-				<param name="android-package" value="ir.clickyab.cordova.MdClickyab"/>
+			<feature name="Clickyab">
+				<param name="android-package" value="ir.clickyab.cordova.Clickyab"/>
 			</feature>
 		</config-file>
 
@@ -40,7 +40,7 @@
 		</config-file>
 
 				
-		<source-file src="src/android/MdClickyab.java" target-dir="ir.clickyab.cordova" />
+		<source-file src="src/android/Clickyab.java" target-dir="ir.clickyab.cordova" />
 		<source-file src="src/android/clickyab.1.1.4.beta.jar" target-dir="libs" />
 	</platform>
 	
